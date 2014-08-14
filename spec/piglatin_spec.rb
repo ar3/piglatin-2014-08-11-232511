@@ -34,3 +34,22 @@ describe Piglatin, 'Create a translate method that translates the phrase from en
 end
 
 
+
+
+describe Piglatin, 'Translate words that start with vowels.' do
+  it 'should: Append "ay" to the word if it ends in a consonant. example: "ask" translates to "askay"' do
+    translator = Piglatin.new 'ask'
+    expect(translator.translate).to eq 'askay'
+  end
+
+  it 'should: Append "yay" to the word if it ends with a vowel. example: "apple" translates to "appleyay"' do
+    translator = Piglatin.new 'apple'
+    expect(translator.translate).to eq 'appleyay'
+  end
+
+  it 'should: Append "nay" to the word if it ends with "y". example: "any" translates to "anynay"' do
+    translator = Piglatin.new 'any'
+    expect(translator.translate).to eq 'anynay'
+  end
+end
+
