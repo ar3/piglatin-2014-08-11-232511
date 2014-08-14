@@ -20,3 +20,17 @@ describe Piglatin, '#phrase' do
 end
 
 
+
+
+describe Piglatin, 'Create a translate method that translates the phrase from english to pig-latin.' do
+  it 'should: The method will return a string.' do
+    translator = Piglatin.new 'something'
+    expect(translator.translate).to be_a String
+  end
+  it 'should: The empty string will return nil.' do
+    translator = Piglatin.new ''
+    expect(translator.translate).to be_nil
+  end
+end
+
+
