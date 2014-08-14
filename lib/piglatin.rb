@@ -9,6 +9,8 @@ class Piglatin
   def translate
     if phrase.empty?
       nil
+    elsif !VOWELS.include? phrase.chars.first
+      return "#{phrase[1, 999999]}#{phrase.chars.first}ay";
     else
       if phrase.chars.last == 'y'
         return "#{phrase}nay";

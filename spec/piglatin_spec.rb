@@ -53,3 +53,23 @@ describe Piglatin, 'Translate words that start with vowels.' do
   end
 end
 
+
+
+
+
+
+
+
+describe Piglatin, 'Translate a word that starts with a single consonant.' do
+  it 'should: Removing the consonant from the front of the word.' do
+    translator = Piglatin.new 'hello'
+    expect(translator.translate).to eq 'ellohay'
+  end
+
+  it 'should: Add the consonant to the end of the word.' do
+    translator = Piglatin.new 'world'
+    expect(translator.translate).to eq 'orldway'
+  end
+
+  # it 'should: Append "ay" to the resulting word.'
+end
